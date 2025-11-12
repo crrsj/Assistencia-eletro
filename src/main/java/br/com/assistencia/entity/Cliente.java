@@ -2,6 +2,7 @@ package br.com.assistencia.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.validator.constraints.br.CPF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,8 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @CPF
+    @Column(unique = true)
     private String cpf;
     private String telefone;
     @OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL)

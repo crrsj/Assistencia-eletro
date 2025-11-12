@@ -2,6 +2,7 @@ package br.com.assistencia.exceptions;
 
 import br.com.assistencia.dto.MensagemDeErro;
 import br.com.assistencia.dto.ValidarCampos;
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -28,4 +29,11 @@ public class TratamentoDeExcessoes {
         var erros = exception.getFieldErrors();
         return ResponseEntity.badRequest().body(erros.stream().map(ValidarCampos::new).toList());
     }
-}
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<MensagemDeErro>erroNoCpf(){
+        var msg = new MensagemDeErro(HttpStatus.BAD_REQUEST,"CPF inválido");
+        return ResponseEntity.badRequest().body(msg);
+    }
+
+   }

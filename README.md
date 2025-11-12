@@ -14,3 +14,5 @@ GET/clientes/buscarCpf?cpf={cpf}Busca um cliente específico pelo CPF.POST/eletr
 ![ass3](https://github.com/user-attachments/assets/20bd3b94-d41e-4ecf-bbb1-e34c91e0ff0e)
 ![ass4](https://github.com/user-attachments/assets/9ec12b17-9136-4aec-b8e0-c7a48d048b0e)
 ![ass5](https://github.com/user-attachments/assets/a46aa3f0-497b-438a-b8ba-dff83eb57a76)
+![ass6](https://github.com/user-attachments/assets/b79bfedf-cedc-4856-bcc0-e0a115b0a8b4)
+![ass7](https://github.com/user-attachments/assets/867500ed-607c-47cf-ac6c-92df32b80aea)
